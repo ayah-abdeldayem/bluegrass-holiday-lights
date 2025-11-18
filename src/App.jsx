@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+iimport React, { useRef } from "react";
 
 export default function App() {
   const contactRef = useRef(null);
@@ -11,14 +11,15 @@ export default function App() {
 
   const handleContactSubmit = (e) => {
     e.preventDefault();
-    // simple mailto – user will swap THEIR email later
-    window.location.href = "mailto:YOUR_EMAIL_HERE?subject=New%20Quote%20Request";
+    window.location.href =
+      "mailto:YOUR_EMAIL_HERE?subject=New%20Quote%20Request";
   };
 
   return (
     <div
       style={{
-        fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif",
+        fontFamily:
+          "Inter, system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif",
         background: "#f5f7fb",
         color: "#1c2833",
       }}
@@ -75,12 +76,14 @@ export default function App() {
         </button>
       </header>
 
-      {/* HERO */}
+      {/* HERO – NEW BLUEGRASS THEMED GRADIENT */}
       <section
         style={{
           position: "relative",
           minHeight: "360px",
-          backgroundImage: "url('/hero-bg.jpg')",
+          backgroundImage:
+            "linear-gradient(135deg, #0A2A4A 0%, #1E4F7B 40%, #0A2A4A 100%), url('/hero-bg.jpg')",
+          backgroundBlendMode: "overlay",
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "flex",
@@ -90,14 +93,6 @@ export default function App() {
           color: "white",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(to bottom right, rgba(0,0,0,0.45), rgba(0,0,0,0.85))",
-          }}
-        ></div>
         <div
           style={{
             position: "relative",
@@ -115,10 +110,12 @@ export default function App() {
           >
             Make Your Home the Brightest on the Block ✨
           </h1>
+
           <p style={{ fontSize: "16px", opacity: 0.9, marginBottom: "20px" }}>
-            Professional Christmas light installation in Lexington, KY.  
+            Professional Christmas light installation in Lexington, KY.
             We design, install, and remove – you just enjoy the view.
           </p>
+
           <button
             onClick={handleQuoteClick}
             style={{
@@ -138,7 +135,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* PRICING */}
+      {/* PRICING FIRST - unchanged */}
       <section
         style={{
           padding: "45px 20px",
@@ -164,10 +161,11 @@ export default function App() {
             marginBottom: 30,
           }}
         >
-          Final quote depends on roofline length, complexity, and add-ons.  
+          Final quote depends on roofline length, complexity, and add-ons.
           All packages include commercial-grade LEDs, timers, and removal.
         </p>
 
+        {/* SAME PRICING CARDS AS BEFORE */}
         <div
           style={{
             display: "grid",
@@ -175,7 +173,7 @@ export default function App() {
             gap: 20,
           }}
         >
-          {/* Small */}
+          {/* SMALL */}
           <div
             style={{
               background: "white",
@@ -204,7 +202,7 @@ export default function App() {
             <p style={{ fontSize: 13, color: "#777" }}>Install + lights + timer</p>
           </div>
 
-          {/* Medium */}
+          {/* MEDIUM */}
           <div
             style={{
               background:
@@ -230,6 +228,7 @@ export default function App() {
             >
               Most Popular
             </div>
+
             <h3 style={{ margin: 0, fontSize: 18 }}>Medium Home</h3>
             <p style={{ margin: "6px 0 10px", fontSize: 14, opacity: 0.9 }}>
               Typical single-family homes and two-stories.
@@ -248,7 +247,7 @@ export default function App() {
             </p>
           </div>
 
-          {/* Large */}
+          {/* LARGE */}
           <div
             style={{
               background: "white",
@@ -281,7 +280,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* TESTIMONIALS – Google review style */}
+      {/* TESTIMONIALS (unchanged) */}
       <section
         style={{
           padding: "40px 20px",
@@ -299,6 +298,7 @@ export default function App() {
         >
           What Our Customers Say
         </h2>
+
         <p
           style={{
             textAlign: "center",
@@ -358,7 +358,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* BEFORE / AFTER */}
+      {/* BEFORE & AFTER — ONLY AFTER IMAGE SHOWN */}
       <section
         style={{
           padding: "40px 20px",
@@ -373,56 +373,30 @@ export default function App() {
             color: "#0A2A4A",
           }}
         >
-          Before & After
+          Before → After
         </h2>
 
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: 20,
+            background: "white",
+            borderRadius: 14,
+            overflow: "hidden",
+            boxShadow: "0 8px 18px rgba(0,0,0,0.08)",
           }}
         >
-          <div
+          <img
+            src="/after1.jpg"
+            alt="Before and After"
             style={{
-              background: "white",
-              borderRadius: 14,
-              overflow: "hidden",
-              boxShadow: "0 8px 18px rgba(0,0,0,0.08)",
+              width: "100%",
+              display: "block",
+              objectFit: "cover",
             }}
-          >
-            <img
-              src="/before1.jpg"
-              alt="Before lights"
-              style={{
-                width: "100%",
-                display: "block",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-          <div
-            style={{
-              background: "white",
-              borderRadius: 14,
-              overflow: "hidden",
-              boxShadow: "0 8px 18px rgba(0,0,0,0.08)",
-            }}
-          >
-            <img
-              src="/after1.jpg"
-              alt="After lights"
-              style={{
-                width: "100%",
-                display: "block",
-                objectFit: "cover",
-              }}
-            />
-          </div>
+          />
         </div>
       </section>
 
-      {/* OUR WORK SECTION */}
+      {/* MORE WORK (unchanged) */}
       <section
         style={{
           padding: "40px 20px 50px",
@@ -474,7 +448,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* CONTACT / QUOTE FORM */}
+      {/* CONTACT FORM (unchanged) */}
       <section
         ref={contactRef}
         id="contact"
@@ -502,7 +476,8 @@ export default function App() {
               marginBottom: 24,
             }}
           >
-            Tell us a bit about your home and we’ll follow up with pricing and availability.
+            Tell us a bit about your home and we’ll follow up with pricing and
+            availability.
           </p>
 
           <form
@@ -513,24 +488,10 @@ export default function App() {
               gap: 12,
             }}
           >
-            <input
-              type="text"
-              placeholder="Your Name"
-              required
-              style={inputStyle}
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              required
-              style={inputStyle}
-            />
-            <input
-              type="text"
-              placeholder="Property Address"
-              required
-              style={inputStyle}
-            />
+            <input type="text" placeholder="Your Name" required style={inputStyle} />
+            <input type="email" placeholder="Email Address" required style={inputStyle} />
+            <input type="text" placeholder="Property Address" required style={inputStyle} />
+
             <textarea
               placeholder="Tell us what areas you’d like lit (roofline, trees, walkway, etc.)"
               rows={4}
@@ -539,6 +500,7 @@ export default function App() {
                 resize: "vertical",
               }}
             />
+
             <button
               type="submit"
               style={{
@@ -556,6 +518,7 @@ export default function App() {
             >
               Submit & Open Email
             </button>
+
             <p
               style={{
                 fontSize: 11,
@@ -583,7 +546,6 @@ export default function App() {
         © {new Date().getFullYear()} Bluegrass Holiday Lights · Lexington, KY
       </footer>
 
-      {/* ANIMATIONS */}
       <style>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }

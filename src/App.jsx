@@ -12,7 +12,7 @@ export default function App() {
   const handleContactSubmit = (e) => {
     e.preventDefault();
     window.location.href =
-      "mailto:YOUR_EMAIL_HERE?subject=New%20Quote%20Request";
+    "mailto:bluepeaksnow@gmail.com?subject=New%20Quote%20Request";
   };
 
   return (

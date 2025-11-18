@@ -56,59 +56,74 @@ export default function App() {
         </h2>
       </section>
 
-      {/* BEFORE & AFTER */}
-      <section style={{ padding: "50px 30px" }}>
-        <h2
-          style={{
-            color: "#0A2A4A",
-            fontSize: "30px",
-            fontWeight: 700,
-            marginBottom: "25px",
-          }}
-        >
-          Before & After Transformations
-        </h2>
+      {/* BEFORE AFTER SECTION */}
+<section style={{ padding: "40px" }}>
+  <h2
+    style={{
+      fontSize: "26px",
+      fontWeight: "700",
+      color: "#083763",
+      marginBottom: "20px",
+    }}
+  >
+    Before & After Transformations
+  </h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "30px",
-          }}
-        >
-          {[
-            { label: "Before", img: "/before1.jpg" },
-            { label: "After", img: "/after1.jpg" },
-          ].map((item, i) => (
-            <div
-              key={i}
-              style={{
-                background: "white",
-                borderRadius: "14px",
-                overflow: "hidden",
-                boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
-                animation: "fadeUp 0.8s ease-out both",
-                animationDelay: `${i * 0.2}s`,
-              }}
-            >
-              <img
-                src={item.img}
-                style={{ width: "100%", height: "230px", objectFit: "cover" }}
-              />
-              <div
-                style={{
-                  padding: "12px",
-                  fontWeight: 600,
-                  fontSize: "18px",
-                  color: "#0A2A4A",
-                }}
-              >
-                {item.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
+      gap: "30px",
+    }}
+  >
+    {/* BEFORE */}
+    <div
+      style={{
+        background: "white",
+        borderRadius: "14px",
+        overflow: "hidden",
+        boxShadow: "0 8px 20px rgba(0,0,0,0.12)",
+      }}
+    >
+      <img
+        src="/before1.jpg"
+        alt="Before"
+        style={{
+          width: "100%",
+          height: "360px",     // 🔥 more height
+          objectFit: "cover",  // ensures responsive fill
+        }}
+      />
+      <div style={{ padding: "14px", fontWeight: 600, color: "#083763" }}>
+        Before
+      </div>
+    </div>
+
+    {/* AFTER */}
+    <div
+      style={{
+        background: "white",
+        borderRadius: "14px",
+        overflow: "hidden",
+        boxShadow: "0 8px 20px rgba(0,0,0,0.12)",
+      }}
+    >
+      <img
+        src="/after1.jpg"
+        alt="After"
+        style={{
+          width: "100%",
+          height: "360px",     // 🔥 more height
+          objectFit: "cover",
+        }}
+      />
+      <div style={{ padding: "14px", fontWeight: 600, color: "#083763" }}>
+        After
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* PRICING */}
       <section style={{ padding: "50px 30px", background: "#fff" }}>

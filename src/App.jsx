@@ -108,7 +108,7 @@ export default function App() {
               fontWeight: 700,
             }}
           >
-            Make Your Home the Brightest on the Block ✨
+            Make Your Home the Brightest on the Block 
           </h1>
 
           <p style={{ fontSize: "16px", opacity: 0.9, marginBottom: "20px" }}>
